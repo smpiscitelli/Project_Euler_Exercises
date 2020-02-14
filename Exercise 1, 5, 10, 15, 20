@@ -1,0 +1,31 @@
+//    1. If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+//
+//    Find the sum of all the multiples of 3 or 5 below 1000.
+    int sum = 0;
+    for (int i = 0; i < 1000; ++i)
+    {
+        if (i % 3 == 0 || i % 5 == 0)
+        {
+            sum += i;
+        }
+    }
+        cout << sum << endl;
+    }
+    
+//5. 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+//
+//What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+//Note: The code for this exerise is not mine. I found and would like to go over their solution as it is a bit confusing. 
+// Will continue to 10, 15, 20 once this is understood.
+    
+    int main() {
+   bool isDivisible;
+        for (long i = 2520; ; i += 20){
+            isDivisible = true;
+            for (int j = 20; j > 10; j--){
+                if (!(i%j == 0)){isDivisible = false; break;}
+            }
+            if (isDivisible){cout << endl << "The smallest number evenly divisible by all integers between 1 and 20 is: " << i << "." << endl << endl; break;}
+        }
+        return 0;
+    }
